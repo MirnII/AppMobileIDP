@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <Grid>
+    <StackLayout x:Name="StartPage">
+        <Frame BackgroundColor="#FF33CB67"  Padding="24" CornerRadius="0">
+            <Label  FontFamily="Comic Sans MS" Text="КАЛЬКУЛЯТОР ТЯЖЕСТИ ГАСТРОИНТЕСТИНАЛЬНЫХ ПРОЯВЛЕНИЙ У ДЕТЕЙ ПЕРВОГО ГОДА ЖИЗНИ" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
+        <Label TextColor="#FF33CB66" Text="ВЫБИРИТЕ ВАРИАНТЫ, НАИБОЛЕЕ СООТВЕСТВУЮЩИЕ КЛИНИЧЕСКИМ ПРОЯВЛЕНИЯМ ВАШЕГО РЕБЕНКА" FontSize="14" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+        <Button  Clicked="Button_Clicked" BackgroundColor="#FF33CB66"  TextColor="White" Margin="50,0" Text="НАЧАТЬ" CornerRadius="15"  ></Button>
+    </StackLayout>
+        <StackLayout x:Name="QuestAnswPage"  IsVisible="false">
+            <Frame BackgroundColor="#FF33CB67" x:Name="sq" Padding="24" CornerRadius="0">
+                <Label  FontFamily="Comic Sans MS" x:Name="LabelContent" Text="СИМПТОМЫ" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+            <Label x:Name="TextSymp" TextColor="#FF33CB66"  FontSize="16" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+            <Label x:Name="result" TextColor="#FF33CB66"  FontSize="16" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+
+            <StackLayout x:Name="QuestStack"  >
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answerone" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answertwo" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answerthree" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answerfour" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answerfive" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answersix" FontSize="14"></RadioButton>
+                <RadioButton Margin="10" HeightRequest="40" x:Name="answerseven" FontSize="14"></RadioButton>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="nextButton" Clicked="nextButton_Clicked"  BackgroundColor="#FF33CB66"  TextColor="White" Margin="50,0,50,10" Text="ПРОДОЛЖИТЬ" CornerRadius="15"  ></Button>
+                <Button x:Name="backButton" IsEnabled="False" IsVisible="False" Clicked="backButton_Clicked"  BackgroundColor="#FF33CB66"  TextColor="White" Margin="50,0,50,20" Text="НАЗАД" CornerRadius="15"  ></Button>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
